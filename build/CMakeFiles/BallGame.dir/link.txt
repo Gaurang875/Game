@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/BallGame.dir/link.d CMakeFiles/BallGame.dir/BallGame.cpp.o -o BallGame  /usr/lib64/libSDL3.so.0.4.12
