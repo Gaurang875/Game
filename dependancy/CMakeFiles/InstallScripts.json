@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/gks/Documents/BallGameSDL/Game/dependancy/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
