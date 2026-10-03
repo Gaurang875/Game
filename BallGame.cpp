@@ -26,7 +26,7 @@ int main(){
         "Game Window",
 	1280, //Width of the window
         720, //Height of the window
-        SDL_WINDOW_RESIZABLE | SDL_WINDOW_MINIMIZED //FLags for window creation
+        SDL_WINDOW_RESIZABLE//FLags for window creation
     );
 
     if(win == NULL){
@@ -49,10 +49,9 @@ int main(){
         return 1;
     }
 
-
+    SDL_Event e;
     //The game loop to keep window and game running
     while(!exit){
-        SDL_Event e;
         while(SDL_PollEvent(&e)){
             if(e.type == SDL_EVENT_QUIT){
                 exit = true;
