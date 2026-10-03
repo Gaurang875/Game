@@ -11,9 +11,9 @@ int main(){
 
     //Initializing SDL3
     
-    SDL_Init(SDL_INIT_VIDEO);
+    
 
-    if(!SDL_INIT_VIDEO){
+    if(!SDL_Init(SDL_INIT_VIDEO)){
 	//checking for any errors during initialization
 	SDL_LogError(SDL_LOG_CATEGORY_ERROR, "SDL Initialization failed: %s\n", SDL_GetError());
 	return 1;
@@ -26,7 +26,7 @@ int main(){
         "Game Window",
 	1280, //Width of the window
         720, //Height of the window
-        SDL_WINDOW_RESIZABLE | SDL_WINDOW_MINIMIZED
+        SDL_WINDOW_RESIZABLE | SDL_WINDOW_MINIMIZED //FLags for window creation
     );
 
     if(win == NULL){
