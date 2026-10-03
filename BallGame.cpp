@@ -24,8 +24,8 @@ int main(){
     
     win = SDL_CreateWindow(
         "Game Window",
-        640,
-        480,
+	1280, //Width of the window
+        720, //Height of the window
         SDL_WINDOW_RESIZABLE | SDL_WINDOW_MINIMIZED
     );
 
