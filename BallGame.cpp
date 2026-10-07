@@ -40,11 +40,28 @@ class App{
 		    running = false;
 		}
 		else if(e.type == SDL_EVENT_KEY_DOWN){
-		    if(e.key.key==SDLK_ESCAPE) running = false;
-		}
+		    if(e.key.key == SDLK_ESCAPE) running = false;
+		    else if (e.key.key == SDLK_LEFT){
+			    if(rectangle.x > windowWidth-windowWidth){
+				rectangle.x-=10;
+			    }
+			    else{
+				SDL_Log("Window Width Left Limit Reached");
+			    }
+		    }
+		    else if(e.key.key == SDLK_RIGHT){
+			    if(rectangle.x + rectangle.w < windowWidth){
+				rectangle.x+=10;
+			    }
+			    else{
+				SDL_Log("Window Width Left Limit Reached");
+			    }
+
+		    }
 		   
-	    }
+	        }
 	    
+	    }
 	}
 
 	void destroy(){
@@ -66,6 +83,9 @@ class App{
 			    720, //The height of the window
 			    SDL_WINDOW_OPENGL //Flags for the window creation
 		     );
+
+	    SDL_GetWindowSize(window, &windowWidth, &windowHeight);
+
             rectangle={
 	    		(float)windowWidth/2-25, 
 	    		(float)windowHeight-100, 
@@ -97,7 +117,7 @@ class App{
 
 	void Render(){
 
-	    SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255); //Giving the background a blue color
+	    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0); //Giving the background a blue color
             SDL_RenderClear(renderer); //Clearing the renderer before actually drawing a rectangle onto the screen
             SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); //Giving the rectangle a green color
 	    SDL_RenderFillRect(renderer, &rectangle); //Filling the reactangle onto the screen
