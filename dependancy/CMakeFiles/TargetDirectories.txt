@@ -1,3 +1,3 @@
-/home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles/BallGame.dir
+/home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles/Main.dir
 /home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles/edit_cache.dir
 /home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles/rebuild_cache.dir

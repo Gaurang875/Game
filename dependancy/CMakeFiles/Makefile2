@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/gks/Documents/BallGameSDL/Game/dependancy
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/BallGame.dir/all
+all: CMakeFiles/Main.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/BallGame.dir/codegen
+codegen: CMakeFiles/Main.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/BallGame.dir/clean
+clean: CMakeFiles/Main.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/BallGame.dir
+# Target rules for target CMakeFiles/Main.dir
 
 # All Build rule for target.
-CMakeFiles/BallGame.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles --progress-num=1,2 "Built target BallGame"
-.PHONY : CMakeFiles/BallGame.dir/all
+CMakeFiles/Main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles --progress-num=1,2,3 "Built target Main"
+.PHONY : CMakeFiles/Main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/BallGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BallGame.dir/all
+CMakeFiles/Main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles 0
-.PHONY : CMakeFiles/BallGame.dir/rule
+.PHONY : CMakeFiles/Main.dir/rule
 
 # Convenience name for target.
-BallGame: CMakeFiles/BallGame.dir/rule
-.PHONY : BallGame
+Main: CMakeFiles/Main.dir/rule
+.PHONY : Main
 
 # codegen rule for target.
-CMakeFiles/BallGame.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles --progress-num=1,2 "Finished codegen for target BallGame"
-.PHONY : CMakeFiles/BallGame.dir/codegen
+CMakeFiles/Main.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles --progress-num=1,2,3 "Finished codegen for target Main"
+.PHONY : CMakeFiles/Main.dir/codegen
 
 # clean rule for target.
-CMakeFiles/BallGame.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/clean
-.PHONY : CMakeFiles/BallGame.dir/clean
+CMakeFiles/Main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/clean
+.PHONY : CMakeFiles/Main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -117,41 +117,65 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BallGame
+# Target rules for targets named Main
 
 # Build rule for target.
-BallGame: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BallGame
-.PHONY : BallGame
+Main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Main
+.PHONY : Main
 
 # fast build rule for target.
-BallGame/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/build
-.PHONY : BallGame/fast
+Main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
+.PHONY : Main/fast
 
-BallGame.o: BallGame.cpp.o
-.PHONY : BallGame.o
+MainGame.o: MainGame.cpp.o
+.PHONY : MainGame.o
 
 # target to build an object file
-BallGame.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/BallGame.cpp.o
-.PHONY : BallGame.cpp.o
+MainGame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MainGame.cpp.o
+.PHONY : MainGame.cpp.o
 
-BallGame.i: BallGame.cpp.i
-.PHONY : BallGame.i
+MainGame.i: MainGame.cpp.i
+.PHONY : MainGame.i
 
 # target to preprocess a source file
-BallGame.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/BallGame.cpp.i
-.PHONY : BallGame.cpp.i
+MainGame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MainGame.cpp.i
+.PHONY : MainGame.cpp.i
 
-BallGame.s: BallGame.cpp.s
-.PHONY : BallGame.s
+MainGame.s: MainGame.cpp.s
+.PHONY : MainGame.s
 
 # target to generate assembly for a file
-BallGame.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BallGame.dir/build.make CMakeFiles/BallGame.dir/BallGame.cpp.s
-.PHONY : BallGame.cpp.s
+MainGame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MainGame.cpp.s
+.PHONY : MainGame.cpp.s
+
+sources/BallGame/BallGame.o: sources/BallGame/BallGame.cpp.o
+.PHONY : sources/BallGame/BallGame.o
+
+# target to build an object file
+sources/BallGame/BallGame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o
+.PHONY : sources/BallGame/BallGame.cpp.o
+
+sources/BallGame/BallGame.i: sources/BallGame/BallGame.cpp.i
+.PHONY : sources/BallGame/BallGame.i
+
+# target to preprocess a source file
+sources/BallGame/BallGame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.i
+.PHONY : sources/BallGame/BallGame.cpp.i
+
+sources/BallGame/BallGame.s: sources/BallGame/BallGame.cpp.s
+.PHONY : sources/BallGame/BallGame.s
+
+# target to generate assembly for a file
+sources/BallGame/BallGame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.s
+.PHONY : sources/BallGame/BallGame.cpp.s
 
 # Help Target
 help:
@@ -161,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... BallGame"
-	@echo "... BallGame.o"
-	@echo "... BallGame.i"
-	@echo "... BallGame.s"
+	@echo "... Main"
+	@echo "... MainGame.o"
+	@echo "... MainGame.i"
+	@echo "... MainGame.s"
+	@echo "... sources/BallGame/BallGame.o"
+	@echo "... sources/BallGame/BallGame.i"
+	@echo "... sources/BallGame/BallGame.s"
 .PHONY : help
 
 
