@@ -461,7 +461,7 @@ Main
  /usr/lib/gcc/x86_64-redhat-linux/16/libgcc.a
  /usr/lib/gcc/x86_64-redhat-linux/16/libgcc_s.so
  /usr/lib/gcc/x86_64-redhat-linux/16/libstdc++.so
- /usr/lib64/libSDL3.so.0.4.16
+ /usr/lib64/libSDL3.so.0.4.18
  /usr/lib64/libatomic.so.1.2.0
  /usr/lib64/libc_nonshared.a
  /home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles/Main.dir/MainGame.cpp.o

@@ -4,7 +4,7 @@ Main: \
   /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o \
   CMakeFiles/Main.dir/MainGame.cpp.o \
   CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o \
-  /usr/lib64/libSDL3.so.0.4.16 \
+  /usr/lib64/libSDL3.so.0.4.18 \
   /usr/lib/gcc/x86_64-redhat-linux/16/libstdc++.so \
   /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/libm.so \
   /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/libm.so \
@@ -50,7 +50,7 @@ CMakeFiles/Main.dir/MainGame.cpp.o:
 
 CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o:
 
-/usr/lib64/libSDL3.so.0.4.16:
+/usr/lib64/libSDL3.so.0.4.18:
 
 /usr/lib/gcc/x86_64-redhat-linux/16/libstdc++.so:
 

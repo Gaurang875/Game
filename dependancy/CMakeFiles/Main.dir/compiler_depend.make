@@ -458,7 +458,7 @@ Main: /lib64/ld-linux-x86-64.so.2 \
   /usr/lib/gcc/x86_64-redhat-linux/16/libgcc.a \
   /usr/lib/gcc/x86_64-redhat-linux/16/libgcc_s.so \
   /usr/lib/gcc/x86_64-redhat-linux/16/libstdc++.so \
-  /usr/lib64/libSDL3.so.0.4.16 \
+  /usr/lib64/libSDL3.so.0.4.18 \
   /usr/lib64/libatomic.so.1.2.0 \
   /usr/lib64/libc_nonshared.a \
   CMakeFiles/Main.dir/MainGame.cpp.o \
@@ -466,6 +466,8 @@ Main: /lib64/ld-linux-x86-64.so.2 \
 
 
 CMakeFiles/Main.dir/MainGame.cpp.o:
+
+/usr/lib64/libSDL3.so.0.4.18:
 
 /usr/lib/gcc/x86_64-redhat-linux/16/libstdc++.so:
 
@@ -932,8 +934,6 @@ CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o:
 /usr/include/bits/time64.h:
 
 /usr/include/c++/16/bits/allocator.h:
-
-/usr/lib64/libSDL3.so.0.4.16:
 
 /usr/include/SDL3/SDL_time.h:
 

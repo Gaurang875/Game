@@ -112,7 +112,7 @@ Main: CMakeFiles/Main.dir/MainGame.cpp.o
 Main: CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o
 Main: CMakeFiles/Main.dir/build.make
 Main: CMakeFiles/Main.dir/compiler_depend.ts
-Main: /usr/lib64/libSDL3.so.0.4.16
+Main: /usr/lib64/libSDL3.so.0.4.18
 Main: CMakeFiles/Main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gks/Documents/BallGameSDL/Game/dependancy/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)
