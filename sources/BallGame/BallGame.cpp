@@ -28,6 +28,12 @@ BallGame::BallGame(const char *title){
 	};
 	ball = {
 		(float)SDL_rand(windowWidth - 25),
+		-25.0f,
+		25.0f,
+		25.0f
+	};
+	extra_life = {
+		(float)SDL_rand(windowWidth -25),
 		50.0f,
 		25.0f,
 		25.0f
@@ -40,9 +46,13 @@ BallGame::BallGame(const char *title){
 		return;
 	}
 //	image = SDL_LoadTexture(renderer, "./Demo.png");
-	if(image == NULL){
+/*	if(image == NULL){
 	    SDL_Log("Image Load failed\n");
 	    return;
+	}
+*/
+	for(auto &rect : PowerUps){
+	    rect = {RandomGenerator(), 50.0f, 25.0f, 25.0f};
 	}
 }
 
@@ -51,21 +61,17 @@ BallGame::~BallGame(){
 	Destroy();
 	SDL_Quit();
 }
-//The Renderer Function
-void BallGame::Render(){
-	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
-	SDL_RenderClear(renderer);
-	SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
-	SDL_RenderFillRect(renderer, &rectangle);
-	DrawBall();
-	SDL_RenderPresent(renderer);
 
+//The Destroy Function
+void BallGame::Destroy(){
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
 }
+
 
 //The main loop Function
 void BallGame::mainLoop(){
 	if(!running){
-		Destroy();
 		return;
 	}
 	Uint64 fps = 0;
@@ -78,17 +84,8 @@ void BallGame::mainLoop(){
 		ScreenUpdate(dt);
 		fpsCounter(currentTick, fps, lastTick);
 	}
-	Destroy();
 }
 
-//The Update Function
-void BallGame::ScreenUpdate(float dt){
-	Input(dt);
-	if(PLAYING){
-		SpawnBall(dt);    
-		Render();
-	}
-}
 
 //The FPSCounter Function
 void BallGame::fpsCounter(Uint64 &ct, Uint64 &fps, Uint64 &lt){
@@ -99,6 +96,17 @@ void BallGame::fpsCounter(Uint64 &ct, Uint64 &fps, Uint64 &lt){
 		auto fps_str="Frame Rate: "+ std::to_string(fps);
 		SDL_SetWindowTitle(window, fps_str.c_str());
 		fps = 0;
+	}
+}
+
+//The Update Function
+void BallGame::ScreenUpdate(float dt){
+	Input(dt);
+	if(PLAYING){
+		SpawnBall(dt);
+		PowerUpGenerator(dt);
+		renderColor();
+		Render();
 	}
 }
 
@@ -116,13 +124,7 @@ void BallGame::Input(float dt){
 
 }
 
-//The Destroy Function
-void BallGame::Destroy(){
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-}
-
-//Keyboard event handling`
+//Keyboard event handling
 void BallGame::Keyboard(float dt){
 	const bool *state = SDL_GetKeyboardState(NULL);
 	float steps = bucket_speed * dt;
@@ -136,40 +138,114 @@ void BallGame::Keyboard(float dt){
 	}
 }
 
+
+//SpawnBall function
+void BallGame::SpawnBall(float dt){
+	float step = ball_speed * dt;
+	if(Collided(rectangle, ball)){
+		ball.y = -25.0f;
+		score++;
+		SDL_Log("Score Update: %s:", std::to_string(score).c_str());
+		if(checkScore()){
+		    ball_speed += 50.0f;
+		    bucket_speed += 50.0f;
+		}
+		ball.x = RandomGenerator();
+	}
+	ball.y += step;
+	if(!Collided(rectangle, ball) && ball.y > windowHeight - 25){
+		SDL_Log("Game Over\n");
+		PLAYING = false;
+	}
+}
+
+
+//The powerUp spawner function
+void BallGame::PowerUpGenerator(float dt){
+	static bool generated = false;
+	if(score == extra_life_score){
+		ExtraLifeSpawn();
+	}
+	if(!generated){
+	 	power_score = NumberGenerator();
+		generated = true;
+	}
+	int powerup_type = SDL_rand(2);
+	
+}
+
+//The random BG color generator
+void BallGame::renderColor(){
+	static int red = 255, blue = 255, green = 255, alpha = 255;
+	static bool called = false;
+	if(checkScore() && !called){
+		red = SDL_rand(250);
+		green = SDL_rand(250);
+		blue = SDL_rand(250);
+		called = true;
+	}
+	if(!checkScore()) called = false;
+	SDL_SetRenderDrawColor(renderer, red, green, blue, alpha);
+}
+
+//The Renderer Function
+void BallGame::Render(){
+	SDL_RenderClear(renderer);
+	SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+	SDL_RenderFillRect(renderer, &rectangle);
+	DrawBall();
+	DrawPowerUp();
+	SDL_RenderPresent(renderer);
+
+}
+
+
+void BallGame::ExtraLifeSpawn(){}
+int BallGame::NumberGenerator(){
+	int start = 20;
+	return score + start + SDL_rand(start);
+}
+
 //A function for spawning the ball
 void BallGame::DrawBall(){
 	SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
 	SDL_RenderFillRect(renderer, &ball);
 }
 
-//A function for one ball per second
-void BallGame::SpawnBall(float dt){
-	float step = ball_speed * dt;
-	if(Collided()){
-		ball.y = 0;
-		score++;
-		SDL_Log("Score Update: %s:", std::to_string(score).c_str());
-		checkScore(score);
-		ball.x = SDL_rand(windowWidth);
-	}
-	ball.y += step;
-	if(!Collided() && ball.y > windowHeight){
-		SDL_Log("Game Over\n");
-		PLAYING = false;
-	}
+//The powerup drawer
+void BallGame::DrawPowerUp(){
+	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+	SDL_RenderFillRect(renderer, &PowerUps[0]);
+
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+	SDL_RenderFillRect(renderer, &PowerUps[1]);
+	
+	SDL_SetRenderDrawColor(renderer, 127, 127, 127, 255);
+	SDL_RenderFillRect(renderer, &PowerUps[2]);
+
+	SDL_SetRenderDrawColor(renderer, 64, 127, 64, 255);
+	SDL_RenderFillRect(renderer, &extra_life);
 }
 
+
+
+//Extra Caller Functions
 //Collision Detection Function
-bool BallGame::Collided(){
-	return SDL_HasRectIntersectionFloat(&rectangle, & ball);
+bool BallGame::Collided(SDL_FRect bucket, SDL_FRect item){
+	return SDL_HasRectIntersectionFloat(&bucket, &item);
 }
 
 //Function to check score and modify attributes
-void BallGame::checkScore(int score){
-	if(score % 10 == 0){
-		//if(bucket_speed <= 1000 && ball_speed <= 1000){
-		ball_speed += 50.0f;
-		bucket_speed += 50.0f;
-		//}
-	}
+bool BallGame::checkScore(){
+    return score > 0 && (score % 10 == 0); 
 }
+
+//The random position generator
+float BallGame::RandomGenerator(){
+    return SDL_rand(windowWidth - 25);
+}
+
+
+
+
+

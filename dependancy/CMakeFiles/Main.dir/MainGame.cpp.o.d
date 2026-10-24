@@ -135,4 +135,8 @@ CMakeFiles/Main.dir/MainGame.cpp.o: \
  /usr/include/c++/16/bits/memory_resource.h /usr/include/c++/16/cstddef \
  /usr/include/c++/16/bits/uses_allocator.h \
  /usr/include/c++/16/bits/uses_allocator_args.h /usr/include/c++/16/tuple \
- /usr/include/c++/16/bits/invoke.h /usr/include/c++/16/bits/ranges_util.h
+ /usr/include/c++/16/bits/invoke.h /usr/include/c++/16/bits/ranges_util.h \
+ /usr/include/c++/16/vector /usr/include/c++/16/bits/stl_uninitialized.h \
+ /usr/include/c++/16/bits/stl_vector.h \
+ /usr/include/c++/16/bits/stl_bvector.h \
+ /usr/include/c++/16/bits/vector.tcc
