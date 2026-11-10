@@ -1,4 +1,4 @@
-#include "BallGame.h"
+#include "Main.h"
 
 int main(){
 	BallGame gameApp("Game Window");

@@ -1,10 +1,11 @@
-Main: \
+Game: \
   /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o \
   /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o \
   /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o \
-  CMakeFiles/Main.dir/MainGame.cpp.o \
-  CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o \
-  /usr/lib64/libSDL3.so.0.4.18 \
+  CMakeFiles/Game.dir/MainGame.cpp.o \
+  CMakeFiles/Game.dir/sources/BallGame/Main.cpp.o \
+  CMakeFiles/Game.dir/sources/BallGame/files/Bucket.cpp.o \
+  /usr/lib64/libSDL3.so.0.4.20 \
   /usr/lib/gcc/x86_64-redhat-linux/16/libstdc++.so \
   /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/libm.so \
   /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/libm.so \
@@ -46,11 +47,13 @@ Main: \
 
 /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o:
 
-CMakeFiles/Main.dir/MainGame.cpp.o:
+CMakeFiles/Game.dir/MainGame.cpp.o:
 
-CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o:
+CMakeFiles/Game.dir/sources/BallGame/Main.cpp.o:
 
-/usr/lib64/libSDL3.so.0.4.18:
+CMakeFiles/Game.dir/sources/BallGame/files/Bucket.cpp.o:
+
+/usr/lib64/libSDL3.so.0.4.20:
 
 /usr/lib/gcc/x86_64-redhat-linux/16/libstdc++.so:
 

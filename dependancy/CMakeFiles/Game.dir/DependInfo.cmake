@@ -8,9 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gks/Documents/BallGameSDL/Game/MainGame.cpp" "CMakeFiles/Main.dir/MainGame.cpp.o" "gcc" "CMakeFiles/Main.dir/MainGame.cpp.o.d"
-  "/home/gks/Documents/BallGameSDL/Game/sources/BallGame/BallGame.cpp" "CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o" "gcc" "CMakeFiles/Main.dir/sources/BallGame/BallGame.cpp.o.d"
-  "" "Main" "gcc" "CMakeFiles/Main.dir/link.d"
+  "/home/gks/Documents/BallGameSDL/Game/MainGame.cpp" "CMakeFiles/Game.dir/MainGame.cpp.o" "gcc" "CMakeFiles/Game.dir/MainGame.cpp.o.d"
+  "/home/gks/Documents/BallGameSDL/Game/sources/BallGame/Main.cpp" "CMakeFiles/Game.dir/sources/BallGame/Main.cpp.o" "gcc" "CMakeFiles/Game.dir/sources/BallGame/Main.cpp.o.d"
+  "/home/gks/Documents/BallGameSDL/Game/sources/BallGame/files/Bucket.cpp" "CMakeFiles/Game.dir/sources/BallGame/files/Bucket.cpp.o" "gcc" "CMakeFiles/Game.dir/sources/BallGame/files/Bucket.cpp.o.d"
+  "" "Game" "gcc" "CMakeFiles/Game.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

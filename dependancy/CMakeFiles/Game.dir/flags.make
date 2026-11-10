@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gks/Documents/BallGameSDL/Game/sources/BallGame
+CXX_INCLUDES = -I/home/gks/Documents/BallGameSDL/Game/sources/BallGame -I/home/gks/Documents/BallGameSDL/Game/sources/BallGame/headers
 
 CXX_FLAGS = 
 

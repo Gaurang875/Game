@@ -1,7 +1,7 @@
-CMakeFiles/Main.dir/MainGame.cpp.o: \
+CMakeFiles/Game.dir/MainGame.cpp.o: \
  /home/gks/Documents/BallGameSDL/Game/MainGame.cpp \
  /usr/include/stdc-predef.h \
- /home/gks/Documents/BallGameSDL/Game/sources/BallGame/BallGame.h \
+ /home/gks/Documents/BallGameSDL/Game/sources/BallGame/Main.h \
  /usr/include/SDL3/SDL.h /usr/include/SDL3/SDL_stdinc.h \
  /usr/include/SDL3/SDL_platform_defines.h \
  /usr/lib/gcc/x86_64-redhat-linux/16/include/stdarg.h \
@@ -139,4 +139,5 @@ CMakeFiles/Main.dir/MainGame.cpp.o: \
  /usr/include/c++/16/vector /usr/include/c++/16/bits/stl_uninitialized.h \
  /usr/include/c++/16/bits/stl_vector.h \
  /usr/include/c++/16/bits/stl_bvector.h \
- /usr/include/c++/16/bits/vector.tcc
+ /usr/include/c++/16/bits/vector.tcc \
+ /home/gks/Documents/BallGameSDL/Game/sources/BallGame/headers/Bucket.h
